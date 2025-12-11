@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vyud AI | Knowledge, Transformed</title>
+    
+    <title>Vyud AI | Корпоративное обучение нового поколения</title>
+    <meta name="description" content="Превратите PDF, Word и Excel в интерактивные курсы за секунды. Автоматизация обучения, проверка знаний и выдача сертификатов.">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta property="og:title" content="Vyud AI | Знания, которые работают">
+    <meta property="og:description" content="Мгновенная трансформация регламентов в интерактивные курсы. Попробуйте демо.">
+    <meta property="og:image" content="https://vyud.tech/image_1.png">
+    <meta property="og:url" content="https://vyud.tech/">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,11 +22,10 @@
     <style>
         /* --- VISUAL STYLE: "Warm Intelligence" --- */
         :root {
-            /* Earthy and Warm Palette */
-            --bg-color: #FDFBF7;       /* Cream / Eggshell - цвет дорогой бумаги */
-            --text-main: #2D2A26;      /* Soft Charcoal - мягкий черный */
-            --text-muted: #5C5855;     /* Глубокий серый для подзаголовков */
-            --accent-color: #D65A31;   /* Muted Terracotta - теплый акцент */
+            --bg-color: #FDFBF7;       /* Теплый бежевый (Eggshell) */
+            --text-main: #2D2A26;      /* Мягкий черный */
+            --text-muted: #5C5855;     /* Глубокий серый */
+            --accent-color: #D65A31;   /* Терракотовый акцент */
             --accent-hover: #B54522;
             --border-soft: #E5E0D8;
         }
@@ -23,22 +33,29 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Inter', sans-serif; /* Clean Sans-Serif for body */
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            /* Анимация появления */
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Libre Baskerville', serif; /* MAJESTIC SERIF for Headings */
-            font-weight: 400; /* Editorial style usually prefers regular weight for serifs */
+            font-family: 'Libre Baskerville', serif; /* Шрифты с засечками для заголовков */
+            font-weight: 400;
             margin-top: 0;
             letter-spacing: -0.02em;
         }
 
         .container {
-            max-width: 1000px; /* Editorial feel needs constrained width, not full fluid */
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -50,7 +67,7 @@
         }
 
         .hero h1 {
-            font-size: 4rem; /* Huge editorial headline */
+            font-size: 3.5rem;
             margin-bottom: 24px;
             color: var(--text-main);
             line-height: 1.1;
@@ -59,34 +76,37 @@
         .hero p.subhead {
             font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 680px;
             margin: 0 auto 40px auto;
             font-weight: 300;
         }
 
         .btn-primary {
             display: inline-block;
-            background-color: var(--text-main); /* Anthropic style often uses dark buttons */
+            background-color: var(--text-main);
             color: #fff;
             padding: 16px 32px;
-            border-radius: 8px; /* Soft Shape */
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
             font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .btn-primary:hover {
-            background-color: var(--accent-color); /* Terracotta hover */
+            background-color: var(--accent-color);
             transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
         }
 
         .hero-image-wrapper {
             margin-top: 60px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Soft elegant shadow */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border-soft);
+            background: white;
         }
 
         .hero-image-placeholder {
@@ -103,17 +123,17 @@
 
         .philosophy blockquote {
             font-family: 'Libre Baskerville', serif;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-style: italic;
             color: var(--text-main);
             max-width: 800px;
             margin: 0 auto;
             border: none;
             padding: 0;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
-        /* --- HOW IT WORKS (FLOW) --- */
+        /* --- HOW IT WORKS --- */
         .how-it-works {
             padding: 80px 0;
             border-top: 1px solid var(--border-soft);
@@ -121,11 +141,16 @@
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .section-header h2 {
             font-size: 2.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
         }
 
         .flow-image-wrapper {
@@ -139,10 +164,10 @@
             border-radius: 8px;
         }
 
-        /* --- CAPABILITIES (GRID) --- */
+        /* --- CAPABILITIES --- */
         .capabilities {
             padding: 80px 0;
-            background-color: rgba(0,0,0,0.02); /* Very subtle separation */
+            background-color: rgba(0,0,0,0.02);
         }
 
         .grid-layout {
@@ -170,8 +195,7 @@
         .feature-item h3 {
             font-size: 1.25rem;
             margin-bottom: 8px;
-            font-family: 'Inter', sans-serif; /* Clean sans for feature names */
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .feature-item p {
@@ -187,7 +211,7 @@
             border: 1px solid var(--border-soft);
         }
 
-        /* --- TECH TRUST --- */
+        /* --- TRUST --- */
         .trust {
             padding: 100px 0;
             text-align: center;
@@ -217,7 +241,7 @@
         footer a {
             color: var(--text-main);
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
@@ -228,9 +252,12 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero { padding: 60px 0 40px 0; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p.subhead { font-size: 1.1rem; }
             .grid-layout { grid-template-columns: 1fr; }
-            .philosophy blockquote { font-size: 1.5rem; }
+            .philosophy blockquote { font-size: 1.4rem; }
+            .btn-primary { width: 100%; box-sizing: border-box; text-align: center; }
         }
     </style>
 </head>
@@ -238,13 +265,13 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Knowledge, Transformed.</h1>
-            <p class="subhead">Vyud AI turns your static documents into living, interactive courses. A new era for corporate learning.</p>
+            <h1>Знания, которые работают.</h1>
+            <p class="subhead">Vyud AI превращает ваши статические документы в живые интерактивные курсы. Новая эра корпоративного обучения.</p>
             
-            <a href="https://retyreg.streamlit.app/" class="btn-primary" target="_blank">Try the Demo</a>
+            <a href="https://retyreg.streamlit.app/" class="btn-primary" target="_blank">Попробовать Демо Бесплатно</a>
 
             <div class="hero-image-wrapper">
-                <img src="image_1.png" alt="Vyud AI Interface" class="hero-image-placeholder">
+                <img src="image_1.png" alt="Интерфейс Vyud AI" class="hero-image-placeholder">
             </div>
         </div>
     </section>
@@ -252,7 +279,7 @@
     <section class="philosophy">
         <div class="container">
             <blockquote>
-                "We believe corporate knowledge shouldn't be locked in PDFs. Traditional training is static and disconnected. Vyud AI bridges the gap between information and understanding."
+                "Мы верим, что знания компании не должны пылиться в PDF-файлах. Традиционное обучение статично. Vyud AI строит мост между информацией и реальным пониманием."
             </blockquote>
         </div>
     </section>
@@ -260,12 +287,12 @@
     <section class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>From Document to Diploma</h2>
-                <p>Upload a file. The AI understands the context. A course is born.</p>
+                <h2>От документа до диплома</h2>
+                <p>Загрузите файл. ИИ поймет контекст. Курс готов.</p>
             </div>
             
             <div class="flow-image-wrapper">
-                <img src="image_0.png" alt="Vyud AI Process Flow" class="flow-image" style="max-width: 80%;">
+                <img src="image_0.png" alt="Схема работы Vyud AI" class="flow-image" style="max-width: 80%;">
             </div>
         </div>
     </section>
@@ -273,33 +300,33 @@
     <section class="capabilities">
         <div class="container">
             <div class="section-header">
-                <h2>Capabilities</h2>
+                <h2>Возможности платформы</h2>
             </div>
             
             <div class="grid-layout">
                 <div class="feature-content">
                     <ul class="feature-list">
                         <li class="feature-item">
-                            <h3>Omnivore Engine</h3>
-                            <p>Reads PDF, DOCX, XLSX, and PPTX with native understanding of tables and structure.</p>
+                            <h3>Мультиформатный движок</h3>
+                            <p>Читает PDF, DOCX, XLSX и PPTX. Понимает структуру таблиц и сложную верстку.</p>
                         </li>
                         <li class="feature-item">
-                            <h3>Global Reach</h3>
-                            <p>Instantly generates content in Central Asian & SEA languages (Kazakh, Uzbek, Thai, Vietnamese).</p>
+                            <h3>Глобальный охват</h3>
+                            <p>Мгновенная генерация контента на языках Центральной Азии и ЮВА (Казахский, Узбекский, Тайский, Вьетнамский).</p>
                         </li>
                         <li class="feature-item">
-                            <h3>Deep Understanding</h3>
-                            <p>Moves beyond trivia. Generates scenario-based questions that test application, not just memory.</p>
+                            <h3>Глубокое понимание</h3>
+                            <p>Не просто тесты на память. ИИ создает ситуационные кейсы (Hard Skills), проверяя умение применять знания.</p>
                         </li>
                         <li class="feature-item">
-                            <h3>Certification</h3>
-                            <p>Auto-generates branded PDF diplomas to validate employee progress.</p>
+                            <h3>Сертификация</h3>
+                            <p>Автоматическая генерация брендированных PDF-дипломов для подтверждения квалификации.</p>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="feature-image">
-                    <img src="image_3.png" alt="Vyud AI Quiz Interface">
+                    <img src="image_3.png" alt="Интерфейс тестирования Vyud AI">
                 </div>
             </div>
         </div>
@@ -307,15 +334,15 @@
 
     <section class="trust">
         <div class="container">
-            <h2>Secure by Design</h2>
-            <p>Built on LlamaParse and GPT-4o with strict data isolation. Your corporate knowledge remains yours, always.</p>
+            <h2>Безопасность в основе</h2>
+            <p>Построено на LlamaParse и GPT-4o с режимом строгой изоляции данных. Ваши корпоративные знания остаются только вашими.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
             <p>
-                &copy; 2025 Vyud AI. All rights reserved.<br><br>
+                &copy; 2025 Vyud AI. Все права защищены.<br><br>
                 <a href="mailto:vatutovd@gmail.com">vatutovd@gmail.com</a>
                 <a href="https://t.me/retyreg" target="_blank">Telegram</a>
             </p>
