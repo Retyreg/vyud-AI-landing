@@ -1,0 +1,36 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="500" rx="12" fill="#0E1117"/>
+    
+    <defs>
+        <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00D4FF" />
+            <stop offset="100%" stop-color="#7D3CFF" />
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <rect x="0" y="0" width="200" height="500" fill="#262730" rx="12"/>
+    <rect x="20" y="30" width="100" height="12" rx="4" fill="#00D4FF" opacity="0.8"/> <rect x="20" y="80" width="160" height="40" rx="6" fill="#0E1117"/>
+    <rect x="35" y="95" width="80" height="8" rx="2" fill="#555"/>
+    
+    <rect x="20" y="130" width="160" height="40" rx="6" fill="transparent"/>
+    <rect x="35" y="145" width="100" height="8" rx="2" fill="#555" opacity="0.5"/>
+
+    <text x="240" y="80" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#FAFAFA">Загрузка материалов</text>
+    <text x="240" y="110" font-family="Arial, sans-serif" font-size="14" fill="#979797">Перетащите PDF или Видео сюда</text>
+
+    <rect x="240" y="140" width="520" height="200" rx="12" stroke="#00D4FF" stroke-width="2" stroke-dasharray="10 10" fill="rgba(0, 212, 255, 0.05)"/>
+    
+    <circle cx="500" cy="220" r="30" stroke="url(#neonGrad)" stroke-width="4" fill="none" filter="url(#glow)"/>
+    <path d="M500 205 V235 M485 220 L500 205 L515 220" stroke="#00D4FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="240" y="380" width="520" height="60" rx="8" fill="#1C1E26"/>
+    <text x="260" y="415" font-family="monospace" font-size="14" fill="#00D4FF">> Анализ контекста... 100%</text>
+    <rect x="700" y="395" width="40" height="30" rx="4" fill="#00D4FF" filter="url(#glow)"/>
+</svg>
