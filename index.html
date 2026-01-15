@@ -10,28 +10,23 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%230E1117%22%2F%3E%3Cpath%20d%3D%22M24%2016L14%2032L24%2048L32%2032Z%22%20fill%3D%22%2300D4FF%22%20opacity%3D%220.9%22%2F%3E%3Cpath%20d%3D%22M40%2016L30%2032L40%2048L50%2032Z%22%20fill%3D%22%2300D4FF%22%2F%3E%3C%2Fsvg%3E">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vyud.tech/">
+    <meta property="og:url" content="https://vyud.online/">
     <meta property="og:title" content="VYUD AI | Знания, которые работают">
     <meta property="og:description" content="Превратите PDF и видео в интерактивные тесты за секунды.">
-    <meta property="og:image" content="https://vyud.tech/hero_dashboard.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* --- DESIGN SYSTEM: DEEP SPACE NEON --- */
         :root {
-            /* Palette */
-            --bg-void: #0E1117;        /* Void Black */
-            --bg-secondary: #262730;   /* Dark Matter */
-            --accent-neon: #00D4FF;    /* Vyud Neon */
-            --accent-purple: #7D3CFF;  /* Data Purple */
-            --text-starlight: #FAFAFA; /* Starlight */
-            --text-muted: #979797;     /* Moon Dust */
+            --bg-void: #0E1117;
+            --bg-secondary: #262730;
+            --accent-neon: #00D4FF;
+            --accent-purple: #7D3CFF;
+            --text-starlight: #FAFAFA;
+            --text-muted: #979797;
             --border-color: rgba(255, 255, 255, 0.1);
-            
-            /* Typography */
             --font-head: 'Space Grotesk', sans-serif;
             --font-body: 'Inter', sans-serif;
             --font-tech: 'JetBrains Mono', monospace;
@@ -45,38 +40,13 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            /* Глубина фона */
             background-image: radial-gradient(circle at 50% 0%, #1c2230 0%, var(--bg-void) 70%);
-            animation: fadeIn 1.0s ease-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        h1, h2, h3 { font-family: var(--font-head); font-weight: 700; color: var(--text-starlight); margin-top: 0; }
+        p { color: var(--text-muted); font-size: 1.1rem; font-weight: 300; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-        h1, h2, h3 {
-            font-family: var(--font-head);
-            font-weight: 700;
-            color: var(--text-starlight);
-            margin-top: 0;
-            letter-spacing: -0.02em;
-        }
-
-        p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            font-weight: 300;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* --- UI ELEMENTS --- */
-        
         .code-pill {
             font-family: var(--font-tech);
             color: var(--accent-neon);
@@ -87,7 +57,6 @@
             border: 1px solid rgba(0, 212, 255, 0.2);
         }
 
-        /* Neon Button */
         .btn-primary {
             display: inline-block;
             background-color: transparent;
@@ -106,18 +75,16 @@
         .btn-primary:hover {
             background-color: var(--accent-neon);
             color: var(--bg-void);
-            box-shadow: 0 0 25px rgba(0, 212, 255, 0.5); /* Glow Effect */
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
             transform: translateY(-2px);
         }
 
-        /* --- HERO SECTION --- */
         .hero {
             text-align: center;
             padding: 140px 0 80px 0;
             position: relative;
         }
 
-        /* Декоративное свечение */
         .hero::before {
             content: '';
             position: absolute;
@@ -131,21 +98,9 @@
             z-index: -1;
         }
 
-        .hero h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-        
-        .hero h1 span {
-            color: var(--accent-neon); /* Акцент на ключевом слове */
-        }
-
-        .hero p.subhead {
-            font-size: 1.3rem;
-            max-width: 720px;
-            margin: 0 auto 40px auto;
-        }
+        .hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 24px; }
+        .hero h1 span { color: var(--accent-neon); }
+        .hero p.subhead { font-size: 1.3rem; max-width: 720px; margin: 0 auto 40px auto; }
 
         .hero-visual {
             margin-top: 60px;
@@ -154,146 +109,10 @@
             background: rgba(255, 255, 255, 0.02);
             padding: 10px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-            backdrop-filter: blur(5px);
         }
 
-        .hero-visual img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-        }
+        .hero-visual img { width: 100%; height: auto; display: block; border-radius: 8px; }
 
-        /* --- PHILOSOPHY --- */
-        .philosophy {
-            padding: 100px 0;
-            text-align: center;
-            background: var(--bg-void);
-        }
-
-        .philosophy blockquote {
-            font-family: var(--font-head);
-            font-size: 2.2rem;
-            color: var(--text-starlight);
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-            line-height: 1.4;
-        }
-
-        .philosophy blockquote span {
-            color: var(--accent-purple);
-            font-style: italic;
-        }
-
-        /* --- HOW IT WORKS --- */
-        .how-it-works {
-            padding: 80px 0;
-            border-top: 1px solid var(--bg-secondary);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-
-        .flow-visual {
-            text-align: center;
-            margin: 0 auto;
-            max-width: 900px;
-        }
-        
-        .flow-visual img {
-            max-width: 100%;
-            height: auto;
-            filter: drop-shadow(0 0 20px rgba(125, 60, 255, 0.1)); 
-        }
-
-        /* --- CAPABILITIES --- */
-        .capabilities {
-            padding: 100px 0;
-            background-color: rgba(255, 255, 255, 0.01);
-        }
-
-        .grid-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .feature-item {
-            margin-bottom: 40px;
-            padding-left: 24px;
-            border-left: 2px solid var(--bg-secondary);
-            transition: border-color 0.3s;
-        }
-
-        .feature-item:hover {
-            border-left-color: var(--accent-neon);
-        }
-
-        .feature-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .feature-visual img {
-            width: 100%;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-visual img:hover {
-            transform: scale(1.02);
-        }
-
-        /* --- TRUST & FOOTER --- */
-        .trust {
-            padding: 80px 0;
-            text-align: center;
-            background: linear-gradient(180deg, var(--bg-void) 0%, #151820 100%);
-            border-top: 1px solid var(--bg-secondary);
-        }
-
-        footer {
-            padding: 60px 0;
-            border-top: 1px solid var(--bg-secondary);
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-family: var(--font-tech);
-        }
-
-        footer a {
-            color: var(--text-starlight);
-            text-decoration: none;
-            margin: 0 15px;
-            border-bottom: 1px solid transparent;
-            transition: all 0.2s;
-        }
-
-        footer a:hover {
-            color: var(--accent-neon);
-            border-bottom-color: var(--accent-neon);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .grid-split { grid-template-columns: 1fr; gap: 40px; }
-            .philosophy blockquote { font-size: 1.5rem; }
-            .btn-primary { width: 100%; box-sizing: border-box; text-align: center; }
-        }
-
-        /* --- VIDEO DEMO SECTION --- */
         .video-demo {
             padding: 80px 0;
             background: linear-gradient(180deg, var(--bg-void) 0%, rgba(125, 60, 255, 0.03) 50%, var(--bg-void) 100%);
@@ -304,7 +123,7 @@
             width: 100%;
             max-width: 900px;
             margin: 0 auto;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border-color);
@@ -319,20 +138,33 @@
             height: 100%;
         }
 
-        /* --- TESTIMONIALS SECTION --- */
-        .testimonials {
-            padding: 100px 0;
-            background: var(--bg-void);
-            border-top: 1px solid var(--bg-secondary);
+        .philosophy { padding: 100px 0; text-align: center; background: var(--bg-void); }
+        .philosophy blockquote {
+            font-family: var(--font-head);
+            font-size: 2.2rem;
+            color: var(--text-starlight);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            line-height: 1.4;
         }
+        .philosophy blockquote span { color: var(--accent-purple); font-style: italic; }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
+        .how-it-works { padding: 80px 0; border-top: 1px solid var(--bg-secondary); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 16px; }
+        .flow-visual { text-align: center; margin: 0 auto; max-width: 900px; }
+        .flow-visual img { max-width: 100%; height: auto; }
 
+        .capabilities { padding: 100px 0; background-color: rgba(255, 255, 255, 0.01); }
+        .grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .feature-item { margin-bottom: 40px; padding-left: 24px; border-left: 2px solid var(--bg-secondary); transition: border-color 0.3s; }
+        .feature-item:hover { border-left-color: var(--accent-neon); }
+        .feature-item h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .feature-visual img { width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+
+        .testimonials { padding: 100px 0; background: var(--bg-void); border-top: 1px solid var(--bg-secondary); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
         .testimonial-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
@@ -343,68 +175,26 @@
             flex-direction: column;
             justify-content: space-between;
         }
-
-        .testimonial-card:hover {
-            border-color: var(--accent-neon);
-            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
-            transform: translateY(-4px);
-        }
-
-        .testimonial-content p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--text-starlight);
-            margin: 0 0 24px 0;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-        }
-
+        .testimonial-card:hover { border-color: var(--accent-neon); box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1); transform: translateY(-4px); }
+        .testimonial-content p { font-size: 1rem; line-height: 1.7; color: var(--text-starlight); margin: 0 0 24px 0; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--border-color); }
         .author-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
+            width: 48px; height: 48px; border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-neon), var(--accent-purple));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-head);
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: var(--bg-void);
-            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-head); font-weight: 700; font-size: 0.9rem; color: var(--bg-void);
         }
+        .author-info { display: flex; flex-direction: column; }
+        .author-info strong { color: var(--text-starlight); font-size: 0.95rem; }
+        .author-info span { color: var(--text-muted); font-size: 0.8rem; margin-top: 2px; }
 
-        .author-info {
-            display: flex;
-            flex-direction: column;
-        }
+        .trust { padding: 80px 0; text-align: center; background: linear-gradient(180deg, var(--bg-void) 0%, #151820 100%); border-top: 1px solid var(--bg-secondary); }
+        footer { padding: 60px 0; border-top: 1px solid var(--bg-secondary); text-align: center; font-size: 0.9rem; color: var(--text-muted); font-family: var(--font-tech); }
+        footer a { color: var(--text-starlight); text-decoration: none; margin: 0 15px; }
+        footer a:hover { color: var(--accent-neon); }
 
-        .author-info strong {
-            color: var(--text-starlight);
-            font-size: 0.95rem;
-        }
-
-        .author-info span {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            margin-top: 2px;
-        }
-
-        @media (max-width: 992px) {
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
+        @media (max-width: 992px) { .testimonials-grid { grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto; } }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .grid-split { grid-template-columns: 1fr; gap: 40px; } .philosophy blockquote { font-size: 1.5rem; } .btn-primary { width: 100%; box-sizing: border-box; text-align: center; } }
     </style>
 </head>
 <body>
@@ -414,20 +204,15 @@
             <h1>Знания, которые <br><span>работают</span>.</h1>
             <p class="subhead">
                 VYUD AI превращает ваши PDF, Видео и Инструкции в интерактивные курсы.<br>
-                <span style="font-family: var(--font-tech); font-size: 0.9em; color: var(--accent-purple);">
-                    > Status: Ready to deploy
-                </span>
+                <span style="font-family: var(--font-tech); font-size: 0.9em; color: var(--accent-purple);">> Status: Ready to deploy</span>
             </p>
-            
             <a href="https://app.vyud.online" class="btn-primary" target="_blank">Запустить Демо</a>
-
             <div class="hero-visual">
                 <img src="hero_dashboard.svg" alt="VYUD AI Dashboard Interface">
             </div>
         </div>
     </section>
 
-    <!-- VIDEO DEMO SECTION -->
     <section class="video-demo">
         <div class="container">
             <div class="section-header">
@@ -435,22 +220,14 @@
                 <p>2 минуты — и вы поймёте всё</p>
             </div>
             <div class="video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/U_qPMAB3UuE" 
-                    title="VYUD AI Demo" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+                <iframe src="https://www.youtube.com/embed/U_qPMAB3UuE" title="VYUD AI Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
     <section class="philosophy">
         <div class="container">
-            <blockquote>
-                "ИИ — это упорядочивание хаоса. Мы превращаем энтропию старых документов в <span>структурированное знание</span>."
-            </blockquote>
+            <blockquote>"ИИ — это упорядочивание хаоса. Мы превращаем энтропию старых документов в <span>структурированное знание</span>."</blockquote>
         </div>
     </section>
 
@@ -460,7 +237,6 @@
                 <h2>От документа до диплома</h2>
                 <p>Загрузите файл. ИИ поймет контекст. Тест готов.</p>
             </div>
-            
             <div class="flow-visual">
                 <img src="flow_diagram.svg" alt="How VYUD AI Works Diagram">
             </div>
@@ -469,19 +245,96 @@
 
     <section class="capabilities">
         <div class="container">
-            <div class="section-header">
-                <h2>Возможности платформы</h2>
-            </div>
-            
+            <div class="section-header"><h2>Возможности платформы</h2></div>
             <div class="grid-split">
                 <div class="feature-content">
                     <div class="feature-item">
                         <h3>Мультиформатный движок</h3>
-                        <p>Читает <span class="code-pill">.pdf</span> <span class="code-pill">.docx</span> <span class="code-pill">.pptx</span> <span class="code-pill">.txt</span> <span class="code-pill">.mp4</span> <span class="code-pill">.mov</span>. 
-                        Понимает структуру таблиц и сложную верстку.</p>
+                        <p>Читает <span class="code-pill">.pdf</span> <span class="code-pill">.docx</span> <span class="code-pill">.pptx</span> <span class="code-pill">.txt</span> <span class="code-pill">.mp4</span> <span class="code-pill">.mov</span>. Понимает структуру таблиц и сложную верстку.</p>
                     </div>
                     <div class="feature-item">
                         <h3>Глобальный охват</h3>
                         <p>Мгновенная генерация контента на любых языках с сохранением смысла и терминологии.</p>
                     </div>
                     <div class="feature-item">
+                        <h3>Hard Skills & Кейсы</h3>
+                        <p>Не просто тесты на память. ИИ создает ситуационные задачи, проверяя умение применять знания.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Сертификация</h3>
+                        <p>Автоматическая генерация именных PDF-сертификатов для сотрудников, прошедших обучение.</p>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    <img src="quiz_ui.svg" alt="VYUD AI Quiz Interface">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Что говорят пользователи</h2>
+                <p>Реальные отзывы от первых клиентов</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>«Всё очень просто, интуитивно ясно и быстро работает. Загрузила документ — и сразу получила тест. Для адаптации сотрудников и СОПов это прям must-have, особенно для ритейла, дистрибуции и FMCG.»</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">АГ</div>
+                        <div class="author-info">
+                            <strong>Асель Галиева</strong>
+                            <span>Head of Learning & Talent, Xalq Banki</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>«Полезный продукт! Активно используем для тестирования знаний у студентов наших курсов и пройденных учебный модулей.»</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DL</div>
+                        <div class="author-info">
+                            <strong>Aizhan Tyrsynova</strong>
+                            <span>AI in Education| Education Program Manager</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>«Мы набираем много персонала в регионах. Нужно быстро обучать и проверять знания по пожарной безопасности, коммерческой тайне и работе с рисками. Раньше это занимало недели — теперь 1-2 дня!»</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <strong>Aider Mambediev</strong>
+                            <span>AKASHY | Strategy | GovTech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust">
+        <div class="container">
+            <h2>Безопасность уровня Enterprise</h2>
+            <p style="margin-top: 15px;">LlamaCloud + OpenAI Enterprise. Строгая изоляция данных.<br>Ваши корпоративные знания остаются только вашими.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 VYUD AI. <span style="color: var(--accent-neon);">System Online.</span><br><br>
+                <a href="mailto:vatutovd@gmail.com">vatutovd@gmail.com</a>
+                <a href="https://t.me/retyreg" target="_blank">Telegram</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+EOF
