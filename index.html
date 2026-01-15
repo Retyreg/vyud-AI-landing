@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>VYUD AI | Скорость мысли. Простота решения.</title>
-    <meta name="description" content="SaaS платформа для мгновенного создания курсов из PDF, Video и DOCX. Обучение сотрудников на автопилоте.">
+    <meta name="description" content="SaaS платформа для мгновенного создания курсов из PDF, Video, DOCX и других доков. Обучение сотрудников на автопилоте.">
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%230E1117%22%2F%3E%3Cpath%20d%3D%22M24%2016L14%2032L24%2048L32%2032Z%22%20fill%3D%22%2300D4FF%22%20opacity%3D%220.9%22%2F%3E%3Cpath%20d%3D%22M40%2016L30%2032L40%2048L50%2032Z%22%20fill%3D%22%2300D4FF%22%2F%3E%3C%2Fsvg%3E">
 
@@ -292,6 +292,119 @@
             .philosophy blockquote { font-size: 1.5rem; }
             .btn-primary { width: 100%; box-sizing: border-box; text-align: center; }
         }
+
+        /* --- VIDEO DEMO SECTION --- */
+        .video-demo {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--bg-void) 0%, rgba(125, 60, 255, 0.03) 50%, var(--bg-void) 100%);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--bg-void);
+            border-top: 1px solid var(--bg-secondary);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--accent-neon);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .testimonial-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-starlight);
+            margin: 0 0 24px 0;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-neon), var(--accent-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--bg-void);
+            flex-shrink: 0;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-info strong {
+            color: var(--text-starlight);
+            font-size: 0.95rem;
+        }
+
+        .author-info span {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        @media (max-width: 992px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -300,7 +413,7 @@
         <div class="container">
             <h1>Знания, которые <br><span>работают</span>.</h1>
             <p class="subhead">
-                VYUD AI превращает ваши PDF, Видео и Инструкции в интерактивные курсы.<br>
+                VYUD AI превращает ваши PDF, Видео и Инструкции в интерактивные тесты и квизы.<br>
                 <span style="font-family: var(--font-tech); font-size: 0.9em; color: var(--accent-purple);">
                     > Status: Ready to deploy
                 </span>
@@ -314,10 +427,29 @@
         </div>
     </section>
 
+    <!-- VIDEO DEMO SECTION -->
+    <section class="video-demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Смотрите, как это работает</h2>
+                <p>2 минуты — и вы поймёте всё</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/U_qPMAB3UuE" 
+                    title="VYUD AI Demo" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <section class="philosophy">
         <div class="container">
             <blockquote>
-                "ИИ — это упорядочивание хаоса. Мы превращаем энтропию старых документов в <span>структурированное знание</span>."
+                "ИИ — это упорядочивание хаоса. Мы превращаем энтропию документов в <span>структурированное знание</span>."
             </blockquote>
         </div>
     </section>
@@ -364,6 +496,60 @@
                 
                 <div class="feature-visual">
                     <img src="quiz_ui.svg" alt="VYUD AI Quiz Interface">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Что говорят пользователи</h2>
+                <p>Реальные отзывы от первых клиентов</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Отзыв 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>«Всё очень просто, интуитивно ясно и быстро работает. Загрузила документ — и сразу получила тест. Для адаптации сотрудников и СОПов это прям must-have, особенно для ритейла, дистрибуции и FMCG.»</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">АГ</div>
+                        <div class="author-info">
+                            <strong>Асель Галиева</strong>
+                            <span>Head of Learning & Talent, Xalq Banki</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>«Классный продукт! Активно используем для тестирования знаний студентов по пройденным темам и курсам.»</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DL</div>
+                        <div class="author-info">
+                            <strong>Aizhan Tysynova</strong>
+                            <span>AI in Education| Education Program Manager@Efekta</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>«Мы набираем много персонала в регионах. Нужно быстро обучать и проверять знания по пожарной безопасности, коммерческой тайне и работе с рисками. Раньше это занимало недели — теперь 1-2 дня!»</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <strong>Aider Mambediev</strong>
+                            <span>AKASHI DATA CENTER| AI Strategy | GovTech</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
