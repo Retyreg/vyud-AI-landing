@@ -22,7 +22,7 @@ https://vyud.online/#pricing
 ## 2. Интернет-ресурсы
 
 - **Лендинг:** https://vyud.online
-- **Веб-приложение:** https://app.vyud.online  
+- **Веб-приложение:** https://lms.vyud.online  
 - **Telegram-бот:** https://t.me/VyudAiBot
 - **Публичная оферта:** https://vyud.online/offer.pdf
 - **Политика конфиденциальности:** https://vyud.online/privacy.html
